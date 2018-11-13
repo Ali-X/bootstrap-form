@@ -5,101 +5,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Bootstrap Form</title>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 </head>
 <body>
-<h1> Personal information </h1>
-<form method="post" action="https://mate-academy-form-lesson.herokuapp.com/create-application">
-  <fieldset>
-    <legend>Personal information</legend>
+  <h1> Personal information </h1>
+  <form method="post" action="https://mate-academy-form-lesson.herokuapp.com/create-application"
+        class="needs-validation" novalidate>
 
-    <div>
-      <label for="surname">Surname:</label>
-      <input name="surname" id="surname" type="text"/>
-    </div>
-    <div>
-      <label for="name">Name:</label>
-      <input name="name" id="name" type="text"/>
-    </div>
-    <div>
-      <label for="age">How old are you:</label>
-      <input max="99" maxlength="2" min="5" minlength="1" value="18" name="age" id="age" type="number"/>
-    </div>
-    <div>
-      <label for="birth">Full date of birth:</label>
-      <input name="birth" id="birth" type="date"/>
-    </div>
-    <div>
-      <label for="terms">I accept the terms of the agreement</label>
-      <input name="terms" id="terms" type="checkbox"/>
-    </div>
-  </fieldset>
+    <fieldset class="form-group">
+      <legend>Personal information</legend>
 
-  <fieldset>
-    <legend>Registration</legend>
-
-    <div>
-      <label for="email">Email:</label>
-      <input required name="email" id="email" type="email"/>
-    </div>
-    <div>
-      <label for="pass">Password:</label>
-      <input required autocomplete="off" name="pass" id="pass" type="password"/>
-    </div>
-  </fieldset>
-
-  <fieldset>
-    <legend>An interesting fact about you!</legend>
-
-    <div>
-      <label>Do you love cats?</label>
-      <div>
-        <label for="cats_yes">Yes</label>
-        <input name="cats" id="cats_yes" type="radio" value="Yes"/>
+      <div class="form-group">
+        <label for="surname">Surname:</label>
+        <input class="form-control" name="surname" id="surname" type="text" placeholder="Your surname" required/>
+        <div class="invalid-feedback">
+          Please type your surname.
+        </div>
       </div>
-      <div>
-        <label for="cats_not">Not</label>
-        <input name="cats" id="cats_not" type="radio" value="Not"/>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input class="form-control" name="name" id="name" type="text" placeholder="Your name" required/>
+        <div class="invalid-feedback">
+          Please type your name.
+        </div>
       </div>
-    </div>
-    <div>
-      <label for="color">What is your fav color?</label> <br>
-      <input id="color" name="color" type="color"/>
-    </div>
-    <div>
-      <label for="type">What time do you go to bed?</label> <br>
-      <input id="type" name="type" type="time" step="1"/>
-    </div>
-    <div>
-      <label for="brand">What is your fav brand of cars?</label> <br>
-      <select id="brand" name="brand" size="3">
-        <option>BMW</option>
-        <option>Audi</option>
-        <option selected>Lada</option>
-      </select>
-    </div>
-    <div>
-      <label for="rate">How do you rate our work?</label> <br>
-      <input id="rate" name="rate" type="range">
-    </div>
-  </fieldset>
+      <div class="form-group">
+        <label for="age">How old are you:</label>
+        <input class="form-control" max="99" maxlength="2" min="5" minlength="1" name="age" id="age"
+               type="number" placeholder="18" required/>
+        <div class="invalid-feedback">
+          Please type your age.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="birth">Full date of birth:</label>
+        <input class="form-control" name="birth" id="birth" type="date" required/>
+        <div class="invalid-feedback">
+          Please choose your birthday.
+        </div>
+      </div>
+      <div class="custom-control custom-checkbox">
+        <input class="custom-control-input" name="terms" id="terms" type="checkbox" required/>
+        <label class="custom-control-label" for="terms">I accept the terms of the agreement</label>
+        <div class="invalid-feedback">
+          You must agree before submitting.
+        </div>
+      </div>
+    </fieldset>
 
-  <fieldset>
-    <legend>Your comments:</legend>
-    <textarea id="comment" name="comment" rows="2" placeholder="Comments"></textarea>
-  </fieldset>
+    <fieldset class="form-group">
+      <legend>Registration</legend>
 
-  <br>
-  <input type="submit" value="Submit"><br>
-  <input type="reset" value="Reset"><br>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input class="form-control" required name="email" id="email" type="email" placeholder="your@email.com"/>
+        <div class="invalid-feedback">
+          Please type your email.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="pass">Password:</label>
+        <input class="form-control" required autocomplete="off" name="pass" id="pass" type="password"
+               placeholder="******"/>
+        <div class="invalid-feedback">
+          Please type password.
+        </div>
+      </div>
+    </fieldset>
 
-</form>
+    <fieldset class="form-group">
+      <legend>An interesting fact about you!</legend>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <div class="form-group">
+        <label>Do you love cats?</label>
+        <div class="custom-control custom-radio">
+          <input class="custom-control-input" class="form-control" name="cats" id="cats_yes" type="radio" value="Yes"/>
+          <label class="custom-control-label" for="cats_yes">Yes</label>
+        </div>
+        <div class="custom-control custom-radio">
+          <input class="custom-control-input" class="form-control" name="cats" id="cats_not" type="radio" value="Not"
+                 required/>
+          <label class="custom-control-label" for="cats_not">Not</label>
+          <div class="invalid-feedback">
+            Please make a choice.
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="color">What is your fav color?</label> <br>
+        <input class="form-control" id="color" name="color" type="color"/>
+      </div>
+      <div class="form-group">
+        <label for="type">What time do you go to bed?</label> <br>
+        <input class="form-control" id="type" name="type" type="time" step="1" required/>
+        <div class="invalid-feedback">
+          Please choose time.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="brand">What is your fav brand of cars?</label> <br>
+        <select class="custom-select" id="brand" name="brand" size="3">
+          <option>BMW</option>
+          <option>Audi</option>
+          <option selected>Lada</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="rate">How do you rate our work?</label> <br>
+        <input class="custom-range" min="1" max="5" id="rate" name="rate" type="range" required>
+        <div class="invalid-feedback">
+          Please rate our work.
+        </div>
+      </div>
+    </fieldset>
 
+    <fieldset class="form-group">
+      <legend>Your comments:</legend>
+      <textarea class="form-control" class="form-control" id="comment" name="comment" rows="2"
+                placeholder="Comments" required></textarea>
+      <div class="invalid-feedback">
+        Please add a comment.
+      </div>
+    </fieldset>
 
+    <br>
+    <input class="btn btn-primary" type="submit" value="Submit"><br>
+    <input type="reset" value="Reset"><br>
+
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+          integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+          integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+          crossorigin="anonymous"></script>
+  <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+          'use strict';
+          window.addEventListener('load', function () {
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              var forms = document.getElementsByClassName('needs-validation');
+              // Loop over them and prevent submission
+              var validation = Array.prototype.filter.call(forms, function (form) {
+                  form.addEventListener('submit', function (event) {
+                      if (form.checkValidity() === false) {
+                          event.preventDefault();
+                          event.stopPropagation();
+                      }
+                      form.classList.add('was-validated');
+                  }, false);
+              });
+          }, false);
+      })();
+  </script>
 </body>
 </html>
