@@ -7,134 +7,157 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
 </head>
-<body>
-  <h1> Personal information </h1>
-  <form method="post" action="https://mate-academy-form-lesson.herokuapp.com/create-application"
-        class="needs-validation" novalidate>
+<body class="bg-light">
+  <div class="container">
+    <h1 class="text-info"><i class="far fa-grin-hearts" data-toggle="popover" data-placement="top"
+                             data-content="The HT was prepared with love by Alina"></i> Personal information </h1>
+    <form method="post" action="https://mate-academy-form-lesson.herokuapp.com/create-application"
+          class="needs-validation" novalidate>
 
-    <fieldset class="form-group">
-      <legend>Personal information</legend>
+      <div class="row">
+        <div class="col-12">
+          <fieldset class="form-group">
+            <legend>Personal information</legend>
 
-      <div class="form-group">
-        <label for="surname">Surname:</label>
-        <input class="form-control" name="surname" id="surname" type="text" placeholder="Your surname" required/>
-        <div class="invalid-feedback">
-          Please type your surname.
+            <div class="form-group">
+              <label for="surname">Surname:</label>
+              <input class="form-control" name="surname" id="surname" type="text" placeholder="Your surname" required/>
+              <div class="invalid-feedback">
+                Please type your surname.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input class="form-control" name="name" id="name" type="text" placeholder="Your name" required/>
+              <div class="invalid-feedback">
+                Please type your name.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="age">How old are you:</label>
+              <input class="form-control" max="99" maxlength="2" min="5" minlength="1" name="age" id="age"
+                     type="number" placeholder="18" required/>
+              <div class="invalid-feedback">
+                Please type your age.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="birth">Full date of birth:</label>
+              <input class="form-control" name="birth" id="birth" type="date" required/>
+              <div class="invalid-feedback">
+                Please choose your birthday.
+              </div>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input class="custom-control-input" name="terms" id="terms" type="checkbox" required/>
+              <label class="custom-control-label" for="terms">I accept the terms of the agreement</label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </fieldset>
         </div>
-      </div>
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input class="form-control" name="name" id="name" type="text" placeholder="Your name" required/>
-        <div class="invalid-feedback">
-          Please type your name.
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="age">How old are you:</label>
-        <input class="form-control" max="99" maxlength="2" min="5" minlength="1" name="age" id="age"
-               type="number" placeholder="18" required/>
-        <div class="invalid-feedback">
-          Please type your age.
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="birth">Full date of birth:</label>
-        <input class="form-control" name="birth" id="birth" type="date" required/>
-        <div class="invalid-feedback">
-          Please choose your birthday.
-        </div>
-      </div>
-      <div class="custom-control custom-checkbox">
-        <input class="custom-control-input" name="terms" id="terms" type="checkbox" required/>
-        <label class="custom-control-label" for="terms">I accept the terms of the agreement</label>
-        <div class="invalid-feedback">
-          You must agree before submitting.
-        </div>
-      </div>
-    </fieldset>
 
-    <fieldset class="form-group">
-      <legend>Registration</legend>
+        <div class="col-12">
+          <fieldset class="form-group">
+            <legend>Registration</legend>
 
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input class="form-control" required name="email" id="email" type="email" placeholder="your@email.com"/>
-        <div class="invalid-feedback">
-          Please type your email.
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input class="form-control" required name="email" id="email" type="email" placeholder="your@email.com"/>
+              <div class="invalid-feedback">
+                Please type your email.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="pass">Password:</label>
+              <input class="form-control" required autocomplete="off" name="pass" id="pass" type="password"
+                     placeholder="******"/>
+              <div class="invalid-feedback">
+                Please type password.
+              </div>
+            </div>
+          </fieldset>
         </div>
       </div>
-      <div class="form-group">
-        <label for="pass">Password:</label>
-        <input class="form-control" required autocomplete="off" name="pass" id="pass" type="password"
-               placeholder="******"/>
-        <div class="invalid-feedback">
-          Please type password.
+
+      <div class="row">
+        <div class="col-12">
+          <fieldset class="form-group">
+            <legend>An interesting fact about you!</legend>
+
+            <div class="form-group">
+              <label>Do you love cats?</label>
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" class="form-control" name="cats" id="cats_yes" type="radio"
+                       value="Yes"/>
+                <label class="custom-control-label" for="cats_yes">Yes</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" class="form-control" name="cats" id="cats_not" type="radio"
+                       value="Not"
+                       required/>
+                <label class="custom-control-label" for="cats_not">Not</label>
+                <div class="invalid-feedback">
+                  Please make a choice.
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="color">What is your fav color?</label> <br>
+              <input class="form-control" id="color" name="color" type="color"/>
+            </div>
+            <div class="form-group">
+              <label for="type">What time do you go to bed?</label> <br>
+              <input class="form-control" id="type" name="type" type="time" step="1" required/>
+              <div class="invalid-feedback">
+                Please choose time.
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="brand">What is your fav brand of cars?</label> <br>
+              <select class="custom-select" id="brand" name="brand" size="3">
+                <option>BMW</option>
+                <option>Audi</option>
+                <option selected>Lada</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="rate">How do you rate our work?</label> <br>
+              <input class="custom-range" min="1" max="5" id="rate" name="rate" type="range" required>
+              <div class="invalid-feedback">
+                Please rate our work.
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="col-12">
+          <fieldset class="form-group">
+            <legend>Your comments:</legend>
+            <textarea class="form-control" class="form-control" id="comment" name="comment" rows="2"
+                      placeholder="Comments" required></textarea>
+            <div class="invalid-feedback">
+              Please add a comment.
+            </div>
+          </fieldset>
         </div>
       </div>
-    </fieldset>
 
-    <fieldset class="form-group">
-      <legend>An interesting fact about you!</legend>
-
-      <div class="form-group">
-        <label>Do you love cats?</label>
-        <div class="custom-control custom-radio">
-          <input class="custom-control-input" class="form-control" name="cats" id="cats_yes" type="radio" value="Yes"/>
-          <label class="custom-control-label" for="cats_yes">Yes</label>
+      <div class="row">
+        <div class="col-12">
+          <input class="btn btn-primary btn-block" type="submit" value="Submit"><br>
         </div>
-        <div class="custom-control custom-radio">
-          <input class="custom-control-input" class="form-control" name="cats" id="cats_not" type="radio" value="Not"
-                 required/>
-          <label class="custom-control-label" for="cats_not">Not</label>
-          <div class="invalid-feedback">
-            Please make a choice.
-          </div>
+        <div class="col-12">
+          <input class="btn btn-block" type="reset" value="Reset"><br>
         </div>
       </div>
-      <div class="form-group">
-        <label for="color">What is your fav color?</label> <br>
-        <input class="form-control" id="color" name="color" type="color"/>
-      </div>
-      <div class="form-group">
-        <label for="type">What time do you go to bed?</label> <br>
-        <input class="form-control" id="type" name="type" type="time" step="1" required/>
-        <div class="invalid-feedback">
-          Please choose time.
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="brand">What is your fav brand of cars?</label> <br>
-        <select class="custom-select" id="brand" name="brand" size="3">
-          <option>BMW</option>
-          <option>Audi</option>
-          <option selected>Lada</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="rate">How do you rate our work?</label> <br>
-        <input class="custom-range" min="1" max="5" id="rate" name="rate" type="range" required>
-        <div class="invalid-feedback">
-          Please rate our work.
-        </div>
-      </div>
-    </fieldset>
 
-    <fieldset class="form-group">
-      <legend>Your comments:</legend>
-      <textarea class="form-control" class="form-control" id="comment" name="comment" rows="2"
-                placeholder="Comments" required></textarea>
-      <div class="invalid-feedback">
-        Please add a comment.
-      </div>
-    </fieldset>
-
-    <br>
-    <input class="btn btn-primary" type="submit" value="Submit"><br>
-    <input type="reset" value="Reset"><br>
-
-  </form>
+    </form>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
           integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -164,6 +187,11 @@
               });
           }, false);
       })();
+  </script>
+  <script>
+      $(function () {
+          $('[data-toggle="popover"]').popover()
+      })
   </script>
 </body>
 </html>
