@@ -39,7 +39,7 @@
             </div>
             <div class="form-group">
               <label for="age">How old are you:</label>
-              <input class="form-control" max="99" maxlength="2" min="5" minlength="1" name="age" id="age"
+              <input class="form-control" max="99" min="5" name="age" id="age"
                      type="number" placeholder="18" required/>
               <div class="invalid-feedback">
                 Please type your age.
@@ -93,12 +93,12 @@
             <div class="form-group">
               <label>Do you love cats?</label>
               <div class="custom-control custom-radio">
-                <input class="custom-control-input" class="form-control" name="cats" id="cats_yes" type="radio"
+                <input class="custom-control-input" name="cats" id="cats_yes" type="radio"
                        value="Yes"/>
                 <label class="custom-control-label" for="cats_yes">Yes</label>
               </div>
               <div class="custom-control custom-radio">
-                <input class="custom-control-input" class="form-control" name="cats" id="cats_not" type="radio"
+                <input class="custom-control-input" name="cats" id="cats_not" type="radio"
                        value="Not"
                        required/>
                 <label class="custom-control-label" for="cats_not">Not</label>
@@ -128,7 +128,7 @@
             </div>
             <div class="form-group">
               <label for="rate">How do you rate our work?</label> <br>
-              <input class="custom-range" min="1" max="5" id="rate" name="rate" type="range" required>
+              <input class="custom-range" min="1" max="5" id="rate" name="rate" type="range">
               <div class="invalid-feedback">
                 Please rate our work.
               </div>
@@ -138,7 +138,7 @@
         <div class="col-12 col-sm-6 offset-sm-3 offset-lg-2">
           <fieldset class="form-group">
             <legend>Your comments:</legend>
-            <textarea class="form-control" class="form-control" id="comment" name="comment" rows="2"
+            <textarea class="form-control" id="comment" name="comment" rows="2"
                       placeholder="Comments" required></textarea>
             <div class="invalid-feedback">
               Please add a comment.
